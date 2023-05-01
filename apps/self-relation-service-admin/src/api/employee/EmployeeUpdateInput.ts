@@ -1,7 +1,7 @@
-import { EmployeeWhereUniqueInput } from "./EmployeeWhereUniqueInput";
 import { EmployeeUpdateManyWithoutEmployeesInput } from "./EmployeeUpdateManyWithoutEmployeesInput";
+import { EmployeeWhereUniqueInput } from "./EmployeeWhereUniqueInput";
 
 export type EmployeeUpdateInput = {
-  employess?: EmployeeWhereUniqueInput | null;
   employees?: EmployeeUpdateManyWithoutEmployeesInput;
+  employee?: EmployeeWhereUniqueInput | null;
 };

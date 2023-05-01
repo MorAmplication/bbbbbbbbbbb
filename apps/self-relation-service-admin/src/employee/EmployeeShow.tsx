@@ -21,7 +21,7 @@ export const EmployeeShow = (props: ShowProps): React.ReactElement => {
         <DateField source="createdAt" label="Created At" />
         <DateField source="updatedAt" label="Updated At" />
         <ReferenceField
-          label="manager"
+          label="employee"
           source="employee.id"
           reference="Employee"
         >
@@ -37,7 +37,7 @@ export const EmployeeShow = (props: ShowProps): React.ReactElement => {
             <DateField source="createdAt" label="Created At" />
             <DateField source="updatedAt" label="Updated At" />
             <ReferenceField
-              label="manager"
+              label="employee"
               source="employee.id"
               reference="Employee"
             >

@@ -98,9 +98,9 @@ export class EmployeeResolverBase {
       data: {
         ...args.data,
 
-        employess: args.data.employess
+        employee: args.data.employee
           ? {
-              connect: args.data.employess,
+              connect: args.data.employee,
             }
           : undefined,
       },
@@ -123,9 +123,9 @@ export class EmployeeResolverBase {
         data: {
           ...args.data,
 
-          employess: args.data.employess
+          employee: args.data.employee
             ? {
-                connect: args.data.employess,
+                connect: args.data.employee,
               }
             : undefined,
         },
@@ -188,10 +188,8 @@ export class EmployeeResolverBase {
     action: "read",
     possession: "any",
   })
-  async employess(
-    @graphql.Parent() parent: Employee
-  ): Promise<Employee | null> {
-    const result = await this.service.getEmployess(parent.id);
+  async employee(@graphql.Parent() parent: Employee): Promise<Employee | null> {
+    const result = await this.service.getEmployee(parent.id);
 
     if (!result) {
       return null;

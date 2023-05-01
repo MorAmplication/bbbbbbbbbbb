@@ -14,8 +14,8 @@ import { ApiProperty } from "@nestjs/swagger";
 import { StringFilter } from "../../util/StringFilter";
 import { Type } from "class-transformer";
 import { IsOptional, ValidateNested } from "class-validator";
-import { EmployeeWhereUniqueInput } from "./EmployeeWhereUniqueInput";
 import { EmployeeListRelationFilter } from "./EmployeeListRelationFilter";
+import { EmployeeWhereUniqueInput } from "./EmployeeWhereUniqueInput";
 
 @InputType()
 class EmployeeWhereInput {
@@ -32,18 +32,6 @@ class EmployeeWhereInput {
 
   @ApiProperty({
     required: false,
-    type: () => EmployeeWhereUniqueInput,
-  })
-  @ValidateNested()
-  @Type(() => EmployeeWhereUniqueInput)
-  @IsOptional()
-  @Field(() => EmployeeWhereUniqueInput, {
-    nullable: true,
-  })
-  employess?: EmployeeWhereUniqueInput;
-
-  @ApiProperty({
-    required: false,
     type: () => EmployeeListRelationFilter,
   })
   @ValidateNested()
@@ -53,6 +41,18 @@ class EmployeeWhereInput {
     nullable: true,
   })
   employees?: EmployeeListRelationFilter;
+
+  @ApiProperty({
+    required: false,
+    type: () => EmployeeWhereUniqueInput,
+  })
+  @ValidateNested()
+  @Type(() => EmployeeWhereUniqueInput)
+  @IsOptional()
+  @Field(() => EmployeeWhereUniqueInput, {
+    nullable: true,
+  })
+  employee?: EmployeeWhereUniqueInput;
 }
 
 export { EmployeeWhereInput as EmployeeWhereInput };
