@@ -42,21 +42,21 @@ class Employee {
 
   @ApiProperty({
     required: false,
-    type: () => Employee,
-  })
-  @ValidateNested()
-  @Type(() => Employee)
-  @IsOptional()
-  employess?: Employee | null;
-
-  @ApiProperty({
-    required: false,
     type: () => [Employee],
   })
   @ValidateNested()
   @Type(() => Employee)
   @IsOptional()
   employees?: Array<Employee>;
+
+  @ApiProperty({
+    required: false,
+    type: () => Employee,
+  })
+  @ValidateNested()
+  @Type(() => Employee)
+  @IsOptional()
+  employee?: Employee | null;
 }
 
 export { Employee as Employee };

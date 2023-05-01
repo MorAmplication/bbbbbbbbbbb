@@ -51,9 +51,9 @@ export class EmployeeControllerBase {
       data: {
         ...data,
 
-        employess: data.employess
+        employee: data.employee
           ? {
-              connect: data.employess,
+              connect: data.employee,
             }
           : undefined,
       },
@@ -62,7 +62,7 @@ export class EmployeeControllerBase {
         createdAt: true,
         updatedAt: true,
 
-        employess: {
+        employee: {
           select: {
             id: true,
           },
@@ -92,7 +92,7 @@ export class EmployeeControllerBase {
         createdAt: true,
         updatedAt: true,
 
-        employess: {
+        employee: {
           select: {
             id: true,
           },
@@ -123,7 +123,7 @@ export class EmployeeControllerBase {
         createdAt: true,
         updatedAt: true,
 
-        employess: {
+        employee: {
           select: {
             id: true,
           },
@@ -160,9 +160,9 @@ export class EmployeeControllerBase {
         data: {
           ...data,
 
-          employess: data.employess
+          employee: data.employee
             ? {
-                connect: data.employess,
+                connect: data.employee,
               }
             : undefined,
         },
@@ -171,7 +171,7 @@ export class EmployeeControllerBase {
           createdAt: true,
           updatedAt: true,
 
-          employess: {
+          employee: {
             select: {
               id: true,
             },
@@ -210,7 +210,7 @@ export class EmployeeControllerBase {
           createdAt: true,
           updatedAt: true,
 
-          employess: {
+          employee: {
             select: {
               id: true,
             },
@@ -247,7 +247,7 @@ export class EmployeeControllerBase {
         createdAt: true,
         updatedAt: true,
 
-        employess: {
+        employee: {
           select: {
             id: true,
           },

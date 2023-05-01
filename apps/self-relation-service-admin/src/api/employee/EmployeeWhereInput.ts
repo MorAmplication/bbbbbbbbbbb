@@ -1,9 +1,9 @@
 import { StringFilter } from "../../util/StringFilter";
-import { EmployeeWhereUniqueInput } from "./EmployeeWhereUniqueInput";
 import { EmployeeListRelationFilter } from "./EmployeeListRelationFilter";
+import { EmployeeWhereUniqueInput } from "./EmployeeWhereUniqueInput";
 
 export type EmployeeWhereInput = {
   id?: StringFilter;
-  employess?: EmployeeWhereUniqueInput;
   employees?: EmployeeListRelationFilter;
+  employee?: EmployeeWhereUniqueInput;
 };

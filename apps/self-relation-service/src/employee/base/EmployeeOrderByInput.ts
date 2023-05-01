@@ -52,7 +52,7 @@ class EmployeeOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
-  employessId?: SortOrder;
+  employeeId?: SortOrder;
 }
 
 export { EmployeeOrderByInput as EmployeeOrderByInput };

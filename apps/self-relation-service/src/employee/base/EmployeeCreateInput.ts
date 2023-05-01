@@ -11,25 +11,13 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { EmployeeWhereUniqueInput } from "./EmployeeWhereUniqueInput";
+import { EmployeeCreateNestedManyWithoutEmployeesInput } from "./EmployeeCreateNestedManyWithoutEmployeesInput";
 import { ValidateNested, IsOptional } from "class-validator";
 import { Type } from "class-transformer";
-import { EmployeeCreateNestedManyWithoutEmployeesInput } from "./EmployeeCreateNestedManyWithoutEmployeesInput";
+import { EmployeeWhereUniqueInput } from "./EmployeeWhereUniqueInput";
 
 @InputType()
 class EmployeeCreateInput {
-  @ApiProperty({
-    required: false,
-    type: () => EmployeeWhereUniqueInput,
-  })
-  @ValidateNested()
-  @Type(() => EmployeeWhereUniqueInput)
-  @IsOptional()
-  @Field(() => EmployeeWhereUniqueInput, {
-    nullable: true,
-  })
-  employess?: EmployeeWhereUniqueInput | null;
-
   @ApiProperty({
     required: false,
     type: () => EmployeeCreateNestedManyWithoutEmployeesInput,
@@ -41,6 +29,18 @@ class EmployeeCreateInput {
     nullable: true,
   })
   employees?: EmployeeCreateNestedManyWithoutEmployeesInput;
+
+  @ApiProperty({
+    required: false,
+    type: () => EmployeeWhereUniqueInput,
+  })
+  @ValidateNested()
+  @Type(() => EmployeeWhereUniqueInput)
+  @IsOptional()
+  @Field(() => EmployeeWhereUniqueInput, {
+    nullable: true,
+  })
+  employee?: EmployeeWhereUniqueInput | null;
 }
 
 export { EmployeeCreateInput as EmployeeCreateInput };

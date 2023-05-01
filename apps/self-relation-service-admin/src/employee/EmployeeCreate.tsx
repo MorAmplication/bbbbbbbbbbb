@@ -4,10 +4,10 @@ import {
   Create,
   SimpleForm,
   CreateProps,
-  ReferenceInput,
-  SelectInput,
   ReferenceArrayInput,
   SelectArrayInput,
+  ReferenceInput,
+  SelectInput,
 } from "react-admin";
 
 import { EmployeeTitle } from "./EmployeeTitle";
@@ -16,13 +16,6 @@ export const EmployeeCreate = (props: CreateProps): React.ReactElement => {
   return (
     <Create {...props}>
       <SimpleForm>
-        <ReferenceInput
-          source="employess.id"
-          reference="Employee"
-          label="manager"
-        >
-          <SelectInput optionText={EmployeeTitle} />
-        </ReferenceInput>
         <ReferenceArrayInput
           source="employees"
           reference="Employee"
@@ -31,6 +24,13 @@ export const EmployeeCreate = (props: CreateProps): React.ReactElement => {
         >
           <SelectArrayInput optionText={EmployeeTitle} />
         </ReferenceArrayInput>
+        <ReferenceInput
+          source="employee.id"
+          reference="Employee"
+          label="employee"
+        >
+          <SelectInput optionText={EmployeeTitle} />
+        </ReferenceInput>
       </SimpleForm>
     </Create>
   );
