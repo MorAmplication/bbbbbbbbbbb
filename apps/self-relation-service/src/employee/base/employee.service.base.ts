@@ -58,11 +58,11 @@ export class EmployeeServiceBase {
       .employees(args);
   }
 
-  async getEmployess(parentId: string): Promise<Employee | null> {
+  async getEmployee(parentId: string): Promise<Employee | null> {
     return this.prisma.employee
       .findUnique({
         where: { id: parentId },
       })
-      .employess();
+      .employee();
   }
 }
