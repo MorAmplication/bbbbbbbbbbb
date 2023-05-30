@@ -98,9 +98,9 @@ export class EmployeeResolverBase {
       data: {
         ...args.data,
 
-        employess: args.data.employess
+        employee: args.data.employee
           ? {
-              connect: args.data.employess,
+              connect: args.data.employee,
             }
           : undefined,
       },
@@ -123,9 +123,9 @@ export class EmployeeResolverBase {
         data: {
           ...args.data,
 
-          employess: args.data.employess
+          employee: args.data.employee
             ? {
-                connect: args.data.employess,
+                connect: args.data.employee,
               }
             : undefined,
         },
@@ -162,13 +162,13 @@ export class EmployeeResolverBase {
   }
 
   @common.UseInterceptors(AclFilterResponseInterceptor)
-  @graphql.ResolveField(() => [Employee])
+  @graphql.ResolveField(() => [Employee], { name: "employees" })
   @nestAccessControl.UseRoles({
     resource: "Employee",
     action: "read",
     possession: "any",
   })
-  async employees(
+  async resolveFieldEmployees(
     @graphql.Parent() parent: Employee,
     @graphql.Args() args: EmployeeFindManyArgs
   ): Promise<Employee[]> {
@@ -182,16 +182,19 @@ export class EmployeeResolverBase {
   }
 
   @common.UseInterceptors(AclFilterResponseInterceptor)
-  @graphql.ResolveField(() => Employee, { nullable: true })
+  @graphql.ResolveField(() => Employee, {
+    nullable: true,
+    name: "employee",
+  })
   @nestAccessControl.UseRoles({
     resource: "Employee",
     action: "read",
     possession: "any",
   })
-  async employess(
+  async resolveFieldEmployee(
     @graphql.Parent() parent: Employee
   ): Promise<Employee | null> {
-    const result = await this.service.getEmployess(parent.id);
+    const result = await this.service.getEmployee(parent.id);
 
     if (!result) {
       return null;
