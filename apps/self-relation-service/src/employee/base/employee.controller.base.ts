@@ -51,9 +51,9 @@ export class EmployeeControllerBase {
       data: {
         ...data,
 
-        employess: data.employess
+        employee: data.employee
           ? {
-              connect: data.employess,
+              connect: data.employee,
             }
           : undefined,
       },
@@ -62,11 +62,31 @@ export class EmployeeControllerBase {
         createdAt: true,
         updatedAt: true,
 
-        employess: {
+        employee: {
           select: {
             id: true,
           },
         },
+
+        xsdaxsza: true,
+        xcsxd: true,
+        xsszxsx: true,
+        rfuihriuhfi: true,
+        hfelrhbflrohfrg: true,
+        krenmkVr: true,
+        mjfrEkjmgrG: true,
+        jmfLejmLfem: true,
+        llvgRelkmv: true,
+        mLkremvgLrem: true,
+        vklrgemnvFer: true,
+        nklrenK: true,
+        nlkvnrgK: true,
+        fgiuewh: true,
+        hfljrebfl: true,
+        nlfrnlr: true,
+        vcvcbcbc: true,
+        ncncnc: true,
+        kcKC: true,
       },
     });
   }
@@ -92,11 +112,31 @@ export class EmployeeControllerBase {
         createdAt: true,
         updatedAt: true,
 
-        employess: {
+        employee: {
           select: {
             id: true,
           },
         },
+
+        xsdaxsza: true,
+        xcsxd: true,
+        xsszxsx: true,
+        rfuihriuhfi: true,
+        hfelrhbflrohfrg: true,
+        krenmkVr: true,
+        mjfrEkjmgrG: true,
+        jmfLejmLfem: true,
+        llvgRelkmv: true,
+        mLkremvgLrem: true,
+        vklrgemnvFer: true,
+        nklrenK: true,
+        nlkvnrgK: true,
+        fgiuewh: true,
+        hfljrebfl: true,
+        nlfrnlr: true,
+        vcvcbcbc: true,
+        ncncnc: true,
+        kcKC: true,
       },
     });
   }
@@ -123,11 +163,31 @@ export class EmployeeControllerBase {
         createdAt: true,
         updatedAt: true,
 
-        employess: {
+        employee: {
           select: {
             id: true,
           },
         },
+
+        xsdaxsza: true,
+        xcsxd: true,
+        xsszxsx: true,
+        rfuihriuhfi: true,
+        hfelrhbflrohfrg: true,
+        krenmkVr: true,
+        mjfrEkjmgrG: true,
+        jmfLejmLfem: true,
+        llvgRelkmv: true,
+        mLkremvgLrem: true,
+        vklrgemnvFer: true,
+        nklrenK: true,
+        nlkvnrgK: true,
+        fgiuewh: true,
+        hfljrebfl: true,
+        nlfrnlr: true,
+        vcvcbcbc: true,
+        ncncnc: true,
+        kcKC: true,
       },
     });
     if (result === null) {
@@ -160,9 +220,9 @@ export class EmployeeControllerBase {
         data: {
           ...data,
 
-          employess: data.employess
+          employee: data.employee
             ? {
-                connect: data.employess,
+                connect: data.employee,
               }
             : undefined,
         },
@@ -171,11 +231,31 @@ export class EmployeeControllerBase {
           createdAt: true,
           updatedAt: true,
 
-          employess: {
+          employee: {
             select: {
               id: true,
             },
           },
+
+          xsdaxsza: true,
+          xcsxd: true,
+          xsszxsx: true,
+          rfuihriuhfi: true,
+          hfelrhbflrohfrg: true,
+          krenmkVr: true,
+          mjfrEkjmgrG: true,
+          jmfLejmLfem: true,
+          llvgRelkmv: true,
+          mLkremvgLrem: true,
+          vklrgemnvFer: true,
+          nklrenK: true,
+          nlkvnrgK: true,
+          fgiuewh: true,
+          hfljrebfl: true,
+          nlfrnlr: true,
+          vcvcbcbc: true,
+          ncncnc: true,
+          kcKC: true,
         },
       });
     } catch (error) {
@@ -210,11 +290,31 @@ export class EmployeeControllerBase {
           createdAt: true,
           updatedAt: true,
 
-          employess: {
+          employee: {
             select: {
               id: true,
             },
           },
+
+          xsdaxsza: true,
+          xcsxd: true,
+          xsszxsx: true,
+          rfuihriuhfi: true,
+          hfelrhbflrohfrg: true,
+          krenmkVr: true,
+          mjfrEkjmgrG: true,
+          jmfLejmLfem: true,
+          llvgRelkmv: true,
+          mLkremvgLrem: true,
+          vklrgemnvFer: true,
+          nklrenK: true,
+          nlkvnrgK: true,
+          fgiuewh: true,
+          hfljrebfl: true,
+          nlfrnlr: true,
+          vcvcbcbc: true,
+          ncncnc: true,
+          kcKC: true,
         },
       });
     } catch (error) {
@@ -247,11 +347,31 @@ export class EmployeeControllerBase {
         createdAt: true,
         updatedAt: true,
 
-        employess: {
+        employee: {
           select: {
             id: true,
           },
         },
+
+        xsdaxsza: true,
+        xcsxd: true,
+        xsszxsx: true,
+        rfuihriuhfi: true,
+        hfelrhbflrohfrg: true,
+        krenmkVr: true,
+        mjfrEkjmgrG: true,
+        jmfLejmLfem: true,
+        llvgRelkmv: true,
+        mLkremvgLrem: true,
+        vklrgemnvFer: true,
+        nklrenK: true,
+        nlkvnrgK: true,
+        fgiuewh: true,
+        hfljrebfl: true,
+        nlfrnlr: true,
+        vcvcbcbc: true,
+        ncncnc: true,
+        kcKC: true,
       },
     });
     if (results === null) {
