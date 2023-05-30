@@ -1,5 +1,5 @@
-datasource postgres {
-  provider = "postgresql"
+datasource mongo {
+  provider = "mongodb"
   url      = env("DB_URL")
 }
 
@@ -8,7 +8,7 @@ generator client {
 }
 
 model User {
-  id        String   @id @default(cuid())
+  id        String   @id @default(auto()) @map("_id") @mongo.ObjectId
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   firstName String?
@@ -19,10 +19,37 @@ model User {
 }
 
 model Employee {
-  id          String     @id @default(cuid())
-  createdAt   DateTime   @default(now())
-  updatedAt   DateTime   @updatedAt
-  employess   Employee?  @relation(name: "employees", fields: [employessId], references: [id])
-  employessId String?
-  employees   Employee[] @relation(name: "employees")
+  id              String     @id @default(auto()) @map("_id") @mongo.ObjectId
+  createdAt       DateTime   @default(now())
+  updatedAt       DateTime   @updatedAt
+  employees       Employee[] @relation(name: "EmployeeOnEmployees")
+  employee        Employee?  @relation(name: "EmployeeOnEmployees", fields: [employeeId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  employeeId      String?    @mongo.ObjectId
+  xsdaxsza        String?
+  xcsxd           String?
+  xsszxsx         String?
+  rfuihriuhfi     String?
+  hfelrhbflrohfrg String?
+  krenmkVr        String?
+  mjfrEkjmgrG     String?
+  jmfLejmLfem     String?
+  llvgRelkmv      String?
+  mLkremvgLrem    String?
+  vklrgemnvFer    String?
+  nklrenK         String?
+  nlkvnrgK        String?
+  fgiuewh         String?
+  hfljrebfl       String?
+  nlfrnlr         String?
+  vcvcbcbc        String?
+  ncncnc          String?
+  kcKC            String?
+}
+
+model UserTest {
+  id        String   @id @default(auto()) @map("_id") @mongo.ObjectId
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  password  String?
+  username  String?  @unique
 }
